@@ -8,7 +8,7 @@ use proc_macro::TokenStream;
 pub fn implementation(_metadata: &TokenStream, input: TokenStream) -> TokenStream {
     let input: proc_macro2::TokenStream = input.into();
     let output = quote::quote! {
-        #[derive(Debug, serde::Deserialize, proc::Load)]
+        #[derive(Debug, serde::Deserialize, arctk_proc::Load)]
         #input
     };
     output.into()
