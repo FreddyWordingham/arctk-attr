@@ -8,7 +8,11 @@
     clippy::pedantic,
     clippy::restriction
 )]
-#![allow(clippy::implicit_return, clippy::module_name_repetitions)]
+#![allow(
+    clippy::blanket_clippy_restriction_lints,
+    clippy::implicit_return,
+    clippy::module_name_repetitions
+)]
 
 extern crate proc_macro;
 extern crate proc_macro2;
